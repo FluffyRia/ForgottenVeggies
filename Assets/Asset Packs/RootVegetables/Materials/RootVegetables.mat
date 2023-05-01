@@ -7,11 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: chimney_shroud_001-defaultMat
+  m_Name: RootVegetables
   m_Shader: {fileID: 4800000, guid: 3a4e5b2e79b83fa4697e438ff5dff08b, type: 3}
   m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_InvalidKeywords:
+  - _EMISSION
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -41,7 +42,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 945df543baeba4293b8410fb58bfced2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 56b98a7e14b1bea4bb80e5215be233e8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
@@ -60,6 +61,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ToonShade:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
@@ -71,11 +80,12 @@ Material:
     - _Emis3: 0
     - _Emis4: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Outline: 0.0031
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -83,10 +93,11 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-    - _Color1: {r: 1, g: 0.7730985, b: 0.36862743, a: 1}
-    - _Color2: {r: 0.654902, g: 0.49803913, b: 0.44313723, a: 0.94509804}
-    - _Color3: {r: 0.70577425, g: 0.7499001, b: 0.78676474, a: 1}
-    - _Color4: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 1, g: 0.9803922, b: 0.89019614, a: 1}
+    - _Color2: {r: 0.8745099, g: 0.9686275, b: 0.454902, a: 1}
+    - _Color3: {r: 0.43529415, g: 0.5568628, b: 0.09411766, a: 1}
+    - _Color4: {r: 0.6117647, g: 0.2627451, b: 0.2901961, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
