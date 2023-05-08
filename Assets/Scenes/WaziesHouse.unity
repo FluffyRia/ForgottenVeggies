@@ -4639,6 +4639,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1517516592175819959, guid: 464587446a6b1ac4f8c64864139e9f85, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1517516592175819960, guid: 464587446a6b1ac4f8c64864139e9f85, type: 3}
       propertyPath: m_Name
       value: Ivy_Leaf (1)
