@@ -1,6 +1,9 @@
 using System;
 using UnityEngine;
 
+/// <summary>
+/// Manager of the events. You can subscribe to/invoke events by refering to an instance of this manager!
+/// </summary>
 public class EventManager : MonoBehaviour
 {
     public static EventManager Instance { get; private set; }
@@ -29,6 +32,19 @@ public class EventManager : MonoBehaviour
         if (OnPlayerJump != null) OnPlayerJump();
     }
 
+    /// <summary>
+    /// Subscribe to this Event to react on whenever player presses interact button!
+    /// </summary>
+    public event Action OnPlayerInteract;
+
+    /// <summary>
+    /// Invoke this method to invoke all the methods subscribed to OnPlayerInteract event!
+    /// </summary>
+    public void PlayerInteract()
+    {
+        print("Interacted");
+        if (OnPlayerInteract != null) OnPlayerInteract();
+    }
 
     /// <summary>
     /// Subscribe to this Event to react on whenever player starts Sprinting
@@ -57,6 +73,20 @@ public class EventManager : MonoBehaviour
         if (OnPlayerStoppedSprinting != null) OnPlayerStoppedSprinting();
     }
 
-    #endregion 
+    #endregion
 
+
+    #region Game Input Events
+    /// <summary>
+    /// Subscribe to this event to react on whenever the exit button is being pressed 
+    /// </summary>
+    public event Action OnExitPressed;
+    /// <summary>
+    /// Invoke this method to invoke all the methods subscribed to OnExitPressed event!
+    /// </summary>
+    public void ExitPressed()
+    {
+        if(OnExitPressed != null) OnExitPressed();
+    }
+    #endregion
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,15 +18,27 @@ public class InputManager : MonoBehaviour
 
         Instance = this;
         _playerIA = new PlayerIA();
-
     }
 
+
+    /// <summary>
+    /// Subscribing a bunch of methods to invoke events from an event manager
+    /// whenever a certain key is being pressed
+    /// </summary>
     private void Start()
     {
+        //Keys associated with the game itself
+        _playerIA.FindAction("Exit").performed += ExitJustPressed;
+
+        //Keys associated with player
         _playerIA.FindAction("Jump").performed += PlayerJumped;
+        _playerIA.FindAction("Interact").performed += PlayerInteracted;
         _playerIA.FindAction("Run").performed += PlayerStartedRunning;
         _playerIA.FindAction("Run").canceled += PlayerStoppedRunning;
     }
+
+
+
     #region Player Inputs
     /// <summary>
     /// Get a value that can be used to manipulate the direction of the player
@@ -44,12 +57,13 @@ public class InputManager : MonoBehaviour
     
     public Vector2 PlayerGetLook()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         print(_playerIA.Main.Look.ReadValue<Vector2>());
         return _playerIA.Main.Look.ReadValue<Vector2>();
     }
 
     /// <summary>
-    /// Fires a method from the event manager that can be used to manipulate the state of the jump!
+    /// Invokes a method from the event manager that can be used to manipulate the state of the jump!
     /// </summary>
     private void PlayerStartedRunning(InputAction.CallbackContext ctx)
     {
@@ -57,7 +71,7 @@ public class InputManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Fires a method from the event manager that can be used to manipulate the state of the jump!
+    /// Invokes a method from the event manager that can be used to manipulate the state of the jump!
     /// </summary>
     private void PlayerStoppedRunning(InputAction.CallbackContext ctx)
     {
@@ -65,13 +79,34 @@ public class InputManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Fires a method from the event manager that can be used to manipulate the state of the jump!
+    /// Invokes a method from the event manager that can be used to manipulate the state of the jump!
     /// </summary>
     private void PlayerJumped(InputAction.CallbackContext ctx)
     {
         EventManager.Instance.PlayerJump();
     }
+
+    /// <summary>
+    /// Invokes a method from the event manager when player pressed the interact button
+    /// </summary>
+    private void PlayerInteracted(InputAction.CallbackContext ctx)
+    {
+        EventManager.Instance.PlayerInteract();
+    }
+
     #endregion
+
+
+    #region Game Inputs
+    /// <summary>
+    /// Invokes a method from the event manager when the Exit button is being pressed
+    /// </summary>
+    private void ExitJustPressed(InputAction.CallbackContext ctx)
+    {
+        EventManager.Instance.ExitPressed();
+    }
+    #endregion
+
 
     #region Enable/Disable
     private void OnEnable()
@@ -83,6 +118,7 @@ public class InputManager : MonoBehaviour
     private void OnDisable()
     {
         _playerIA.FindAction("Jump").performed -= PlayerJumped;
+        _playerIA.FindAction("Interact").performed -= PlayerInteracted;
         _playerIA.FindAction("Run").performed -= PlayerStartedRunning;
         _playerIA.FindAction("Run").canceled -= PlayerStoppedRunning;
         _playerIA.Disable();
