@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class PlayerJumpingState : MonoBehaviour
+/// <summary>
+/// Manipulates Jumping Behavior
+/// </summary>
+public class PlayerJumpingState : AbstractState
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void EnterState(AbstractStateManager stateManager)
     {
-        
+    }
+    public override void UpdateState(AbstractStateManager stateManager)
+    {
+    }
+    public override void ExitState(AbstractStateManager stateManager)
+    {
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 }

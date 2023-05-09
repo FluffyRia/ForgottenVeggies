@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class AbstractState : MonoBehaviour
+/// <summary>
+/// Defines a base template for the states.
+/// I use states only to trigger events and turn on or turn off certain behaviors.
+/// States themselves don't contain information and methods of the behaviors.
+/// </summary>
+public abstract class AbstractState : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public abstract void EnterState(AbstractStateManager stateManager);
+    public abstract void UpdateState(AbstractStateManager stateManager);
+    public abstract void ExitState(AbstractStateManager stateManager);
 }

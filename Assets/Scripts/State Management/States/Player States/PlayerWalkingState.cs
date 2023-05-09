@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class WalkingState : MonoBehaviour
+/// <summary>
+/// Manipulates Walking Behavior
+/// </summary>
+public class PlayerWalkingState : AbstractState
 {
-    // Start is called before the first frame update
-    void Start()
+    private PlayerWalkingBehavior _walkingBeh;
+    public override void EnterState(AbstractStateManager stateManager)
     {
-        
+        _walkingBeh = stateManager.GetComponent<PlayerWalkingBehavior>();
+        _walkingBeh.enabled = true;
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void UpdateState(AbstractStateManager stateManager)
     {
-        
+    }
+    public override void ExitState(AbstractStateManager stateManager)
+    {
+        _walkingBeh.enabled = false;
     }
 }

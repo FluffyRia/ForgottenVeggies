@@ -46,7 +46,6 @@ public class InputManager : MonoBehaviour
     /// <returns>Vector2 value of WASD or Gamepad's Left Stick</returns>
     public Vector2 PlayerGetDirection()
     {
-        print(_playerIA.Main.Direction.ReadValue<Vector2>());
         return _playerIA.Main.Direction.ReadValue<Vector2>();
     }
 
@@ -58,7 +57,6 @@ public class InputManager : MonoBehaviour
     public Vector2 PlayerGetLook()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        print(_playerIA.Main.Look.ReadValue<Vector2>());
         return _playerIA.Main.Look.ReadValue<Vector2>();
     }
 
@@ -67,7 +65,7 @@ public class InputManager : MonoBehaviour
     /// </summary>
     private void PlayerStartedRunning(InputAction.CallbackContext ctx)
     {
-        EventManager.Instance.PlayerStartSprinting();
+        EventManager.Instance.PlayerStartRunning();
     }
 
     /// <summary>
@@ -75,7 +73,7 @@ public class InputManager : MonoBehaviour
     /// </summary>
     private void PlayerStoppedRunning(InputAction.CallbackContext ctx)
     {
-        EventManager.Instance.PlayerStopSprinting();
+        EventManager.Instance.PlayerStopRunning();
     }
 
     /// <summary>

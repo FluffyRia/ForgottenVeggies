@@ -49,28 +49,28 @@ public class EventManager : MonoBehaviour
     /// <summary>
     /// Subscribe to this Event to react on whenever player starts Sprinting
     /// </summary>
-    public event Action OnPlayerStartedSprinting;
+    public event Action OnPlayerStartedRunning;
     /// <summary>
     /// Subscribe to this Event to react on whenever player stops Sprinting
     /// </summary>
-    public event Action OnPlayerStoppedSprinting;
+    public event Action OnPlayerStoppedRunning;
 
     /// <summary>
     /// Invoke this method to invoke all the methods subscribed to OnPlayerJump event!
     /// </summary>
-    public void PlayerStartSprinting()
+    public void PlayerStartRunning()
     {
-        print("Started Running");
-        if (OnPlayerStartedSprinting != null) OnPlayerStartedSprinting();
+        
+        if (OnPlayerStartedRunning != null) OnPlayerStartedRunning();
     }
 
     /// <summary>
     /// Invoke this method to invoke all the methods subscribed to OnPlayerJump event!
     /// </summary>
-    public void PlayerStopSprinting()
+    public void PlayerStopRunning()
     {
-        print("Stopped Running");
-        if (OnPlayerStoppedSprinting != null) OnPlayerStoppedSprinting();
+        
+        if (OnPlayerStoppedRunning != null) OnPlayerStoppedRunning();
     }
 
     #endregion
