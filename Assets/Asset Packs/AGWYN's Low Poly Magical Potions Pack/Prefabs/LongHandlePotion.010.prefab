@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 53530357082947625}
   - component: {fileID: 3968223253271285644}
   - component: {fileID: 1221884316250733382}
-  - component: {fileID: 1121067363977026616}
   m_Layer: 0
   m_Name: LongHandlePotion.010
   m_TagString: Untagged
@@ -85,17 +84,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1121067363977026616
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861873354562427539}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1594359923327721470, guid: 47d672bf078fca9438401f4a01b4dd77, type: 3}

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3918751411058313036}
   - component: {fileID: 3918751411055445868}
   - component: {fileID: 3918751411056412076}
-  - component: {fileID: 3918751411058678635}
   m_Layer: 0
   m_Name: Candlestick_Small
   m_TagString: Untagged
@@ -87,20 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3918751411058678635
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3918751411058678636}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4045767337415128452, guid: 82c33bb50f891694a96df903cca9ea3f, type: 3}
 --- !u!1 &5712316411707296396
 GameObject:
   m_ObjectHideFlags: 0

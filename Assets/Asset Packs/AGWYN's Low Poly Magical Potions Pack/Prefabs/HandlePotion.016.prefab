@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7597882343205591291}
   - component: {fileID: 6836114766179882846}
   - component: {fileID: 8735353117763478420}
-  - component: {fileID: 6109125996652806675}
   m_Layer: 0
   m_Name: HandlePotion.016
   m_TagString: Untagged
@@ -85,17 +84,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6109125996652806675
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7078190838232842817}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8691253347875223830, guid: 71b29433212792a48996cf13ff9691df, type: 3}

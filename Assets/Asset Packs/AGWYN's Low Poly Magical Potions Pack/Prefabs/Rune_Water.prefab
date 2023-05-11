@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5385696490453015566}
   - component: {fileID: 9012281168016053163}
   - component: {fileID: 6554701944887895905}
-  - component: {fileID: 7716928369626413981}
   m_Layer: 0
   m_Name: Rune_Water
   m_TagString: Untagged
@@ -85,17 +84,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7716928369626413981
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752993882721306292}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 823431291377416665, guid: 39a6779505006394bbdd558f79654e6b, type: 3}

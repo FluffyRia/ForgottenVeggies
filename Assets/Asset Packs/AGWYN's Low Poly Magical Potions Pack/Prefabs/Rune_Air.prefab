@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3349865294240429544}
   - component: {fileID: 1860768578632104525}
   - component: {fileID: 4482823668782845575}
-  - component: {fileID: 3894964509090994673}
   m_Layer: 0
   m_Name: Rune_Air
   m_TagString: Untagged
@@ -85,17 +84,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3894964509090994673
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2681554997340827474}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5153110766834481806, guid: 674fb5c297aaf424da54962691fad656, type: 3}
